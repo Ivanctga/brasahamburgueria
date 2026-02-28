@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brasa Burger — O hambúrguer mais insano da cidade. Smash burgers artesanais, ingredientes premium e muito fogo. Peça agora pelo WhatsApp ou iFood." />
+  <meta name="keywords" content="hamburgueria, smash burger, hambúrguer artesanal, delivery, belo horizonte" />
+  <meta name="author" content="Brasa Burger" />
+  <meta name="theme-color" content="#0F0F0F" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Brasa Burger 🔥 — Sabor que vem do fogo" />
+  <meta property="og:description" content="Smash burgers artesanais feitos na brasa. Ingredientes premium, pão próprio e molhos caseiros." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brasaburger.com.br" />
+
+  <link rel="icon" href="assets/images/icon.png" type="image/png" />
+
+  <!-- Performance: preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <title>Brasa Burger 🔥 — Sabor que vem do fogo</title>
+</head>
+
+<body>
+
+  <!-- Textura de grão decorativa -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ── BANNER PROMOCIONAL ── -->
+  <div class="promo-banner" role="complementary" aria-label="Promoção do dia">
+    <div class="promo-banner__inner">
+      <span class="promo-banner__text">
+        <i class="fa-solid fa-fire" aria-hidden="true"></i>
+        <strong>COMBO DO DIA:</strong> Smash Duplo + Fritas + Refri por <strong>R$ 42,90</strong>
+      </span>
+      <span class="promo-banner__separator" aria-hidden="true">—</span>
+      <span class="promo-banner__label">Promoção acaba em:</span>
+      <div class="countdown" role="timer" aria-live="polite" aria-label="Tempo restante da promoção">
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countdownHours">02</span>
+        </div>
+        <span class="countdown__sep" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countdownMinutes">30</span>
+        </div>
+        <span class="countdown__sep" aria-hidden="true">:</span>
+        <div class="countdown__unit">
+          <span class="countdown__number" id="countdownSeconds">00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NAVBAR ── -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__container">
+      <a href="#home" class="navbar__logo" aria-label="Brasa Burger — Voltar ao início">
+        BRASA<span>.</span>
+      </a>
+
+      <nav class="navbar__nav" aria-label="Menu principal">
+        <ul class="navbar__links">
+          <li><a href="#home" class="navbar__link">Home</a></li>
+          <li><a href="#cardapio" class="navbar__link">Cardápio</a></li>
+          <li><a href="#sobre" class="navbar__link">Sobre</a></li>
+          <li><a href="#avaliacoes" class="navbar__link">Avaliações</a></li>
+          <li><a href="#localizacao" class="navbar__link">Contato</a></li>
+          <li>
+            <a href="https://wa.me/5531999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20🍔"
+              class="navbar__link navbar__cta" target="_blank" rel="noopener noreferrer"
+              aria-label="Pedir agora pelo WhatsApp">
+              <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
+              Pedir Agora
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Abrir menu de navegação"
+        aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu de navegação mobile"
+    aria-modal="true" aria-hidden="true">
+    <nav aria-label="Navegação mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="#home" class="mobile-menu__link" data-close-menu>Home</a></li>
+        <li><a href="#cardapio" class="mobile-menu__link" data-close-menu>Cardápio</a></li>
+        <li><a href="#sobre" class="mobile-menu__link" data-close-menu>Sobre</a></li>
+        <li><a href="#avaliacoes" class="mobile-menu__link" data-close-menu>Avaliações</a></li>
+        <li><a href="#localizacao" class="mobile-menu__link" data-close-menu>Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <main id="main-content">
+
+    <!-- ── SEÇÃO 1: HERO ── -->
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="container hero__container">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Aberto agora &bull; Entrega 30–45 min
+          </div>
+
+          <h1 class="hero__title" id="hero-heading">
+            O HAMBÚRGUER<br />
+            <span class="hero__title--red">MAIS</span>
+            <span class="hero__title--yellow">INSANO</span><br />
+            DA CIDADE
+          </h1>
+
+          <p class="hero__subtitle">
+            Sabor que vem do fogo. Feito na brasa, todo dia.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#cardapio" class="btn btn--primary">
+              <i class="fa-solid fa-burger" aria-hidden="true"></i>
+              Ver Cardápio
+            </a>
+            <a href="https://wa.me/5531999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20🍔" class="btn btn--outline"
+              target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              Pedir pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="hero__stats" role="list" aria-label="Estatísticas da Brasa Burger">
+            <div class="hero__stat" role="listitem">
+              <span class="hero__stat-num">2.4K+</span>
+              <span class="hero__stat-label">Avaliações <i class="fa-solid fa-star" aria-label="estrela"></i></span>
+            </div>
+            <div class="hero__stat" role="listitem">
+              <span class="hero__stat-num">98%</span>
+              <span class="hero__stat-label">Satisfação</span>
+            </div>
+            <div class="hero__stat" role="listitem">
+              <span class="hero__stat-num">5</span>
+              <span class="hero__stat-label">Anos de fogo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__visual-scene">
+            <div class="hero__glow hero__glow--back"></div>
+            <div class="hero__glow hero__glow--front"></div>
+            <div class="hero__burger-stage" id="heroBurger" title="Clique 5x para surpresa! 🔥">
+              <div class="hero__burger-shadow"></div>
+              <img src="assets/images/backgraound2.png" alt="Hambúrguer artesanal Brasa Burger"
+                class="hero__burger-img" loading="eager" fetchpriority="high" width="700" height="700" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SEÇÃO 2: CARDÁPIO ── -->
+    <section class="menu" id="cardapio" aria-labelledby="menu-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-tag">
+            <i class="fa-solid fa-burger" aria-hidden="true"></i> Cardápio
+          </span>
+          <h2 class="section-title" id="menu-heading">
+            ESCOLHA SEU <span class="text-red">VENENO</span>
+          </h2>
+          <p class="section-subtitle">
+            Ingredientes frescos, pão artesanal e muito, muito sabor.
+          </p>
+        </header>
+
+        <div class="menu__filters reveal" role="group" aria-label="Filtrar cardápio por categoria">
+          <button class="filter-btn filter-btn--active" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-btn" data-filter="smash" aria-pressed="false">Smash</button>
+          <button class="filter-btn" data-filter="classicos" aria-pressed="false">Clássicos</button>
+          <button class="filter-btn" data-filter="combos" aria-pressed="false">Combos</button>
+          <button class="filter-btn" data-filter="vegetariano" aria-pressed="false">Vegetariano 🌱</button>
+        </div>
+
+        <div class="menu__grid" id="menuGrid" role="list" aria-label="Itens do cardápio">
+
+          <article class="menu-card reveal" role="listitem" data-category="smash">
+            <div class="menu-card__img">
+              <img src="assets/images/burg-smash.jpg"
+                alt="Smash Bacon Duplo — pão brioche tostado, 2 smash 150g, cheddar e bacon crocante"
+                class="menu-card__photo" loading="lazy" width="500" height="200" />
+              <span class="menu-card__badge menu-card__badge--popular">
+                <i class="fa-solid fa-fire" aria-hidden="true"></i> Popular
+              </span>
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">Smash Bacon Duplo</h3>
+              <p class="menu-card__desc">Pão brioche tostado, 2 smash 150g, cheddar americano e bacon crocante artesanal</p>
+              <footer class="menu-card__footer">
+                <span class="menu-card__price"><span class="sr-only">Preço:</span>R$ 34,90</span>
+                <button class="btn-pedir" data-name="Smash Bacon Duplo" data-price="34.90" data-emoji="🍔"
+                  aria-label="Adicionar Smash Bacon Duplo ao carrinho">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Carrinho
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" data-category="classicos">
+            <div class="menu-card__img">
+              <img src="assets/images/burg-classico.jpg"
+                alt="Brasa Clássico — burguer 180g com alface, tomate e cebola caramelizada"
+                class="menu-card__photo" loading="lazy" width="500" height="200" />
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">Brasa Clássico</h3>
+              <p class="menu-card__desc">Burguer 180g, alface crespa, tomate, cebola caramelizada e molho secreto Brasa</p>
+              <footer class="menu-card__footer">
+                <span class="menu-card__price"><span class="sr-only">Preço:</span>R$ 28,90</span>
+                <button class="btn-pedir" data-name="Brasa Clássico" data-price="28.90" data-emoji="🥩"
+                  aria-label="Adicionar Brasa Clássico ao carrinho">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Carrinho
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" data-category="smash">
+            <div class="menu-card__img">
+              <img src="assets/images/burg-triplo.jpg" alt="Triplo Cheddar — 3 smash 80g com triplo cheddar derretido"
+                class="menu-card__photo" loading="lazy" width="500" height="200" />
+              <span class="menu-card__badge menu-card__badge--new">
+                <i class="fa-solid fa-sparkles" aria-hidden="true"></i> Novo
+              </span>
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">Triplo Cheddar</h3>
+              <p class="menu-card__desc">3 smash 80g, triplo cheddar derretido, pickle agridoce e pão de cerveja escura</p>
+              <footer class="menu-card__footer">
+                <span class="menu-card__price"><span class="sr-only">Preço:</span>R$ 39,90</span>
+                <button class="btn-pedir" data-name="Triplo Cheddar" data-price="39.90" data-emoji="🧀"
+                  aria-label="Adicionar Triplo Cheddar ao carrinho">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Carrinho
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" data-category="classicos">
+            <div class="menu-card__img">
+              <img src="assets/images/burg-hot.jpg" alt="Hot Inferno — smash 160g com jalapeño e molho sriracha"
+                class="menu-card__photo" loading="lazy" width="500" height="200" />
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">Hot Inferno</h3>
+              <p class="menu-card__desc">Smash 160g, jalapeño fresco, molho sriracha caseiro e queijo pepper jack</p>
+              <footer class="menu-card__footer">
+                <span class="menu-card__price"><span class="sr-only">Preço:</span>R$ 31,90</span>
+                <button class="btn-pedir" data-name="Hot Inferno" data-price="31.90" data-emoji="🌶️"
+                  aria-label="Adicionar Hot Inferno ao carrinho">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Carrinho
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" data-category="vegetariano">
+            <div class="menu-card__img">
+              <img src="assets/images/burg-vegan.jpg"
+                alt="Green Monster — hambúrguer vegetariano de grão-de-bico e cogumelo"
+                class="menu-card__photo" loading="lazy" width="500" height="200" />
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">Green Monster</h3>
+              <p class="menu-card__desc">Burguer de grão-de-bico e cogumelo, guacamole, rúcula e aioli de alho assado</p>
+              <footer class="menu-card__footer">
+                <span class="menu-card__price"><span class="sr-only">Preço:</span>R$ 29,90</span>
+                <button class="btn-pedir" data-name="Green Monster" data-price="29.90" data-emoji="🌱"
+                  aria-label="Adicionar Green Monster ao carrinho">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Carrinho
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" role="listitem" data-category="combos">
+            <div class="menu-card__img">
+              <img src="assets/images/burg-combo.jpg" alt="Combo Família — 2 burguers, fritas gigante e 2 refris"
+                class="menu-card__photo" loading="lazy" width="500" height="200" />
+              <span class="menu-card__badge menu-card__badge--popular">
+                <i class="fa-solid fa-gem" aria-hidden="true"></i> Melhor valor
+              </span>
+            </div>
+            <div class="menu-card__body">
+              <h3 class="menu-card__name">Combo Família</h3>
+              <p class="menu-card__desc">2 burguers à escolha + fritas gigante + 2 refris ou sucos naturais</p>
+              <footer class="menu-card__footer">
+                <span class="menu-card__price"><span class="sr-only">Preço:</span>R$ 74,90</span>
+                <button class="btn-pedir" data-name="Combo Família" data-price="74.90" data-emoji="🍟"
+                  aria-label="Adicionar Combo Família ao carrinho">
+                  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> Carrinho
+                </button>
+              </footer>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SEÇÃO 3: SOBRE ── -->
+    <section class="about" id="sobre" aria-labelledby="about-heading">
+      <div class="container about__container">
+
+        <div class="about__visual reveal">
+          <span class="about__bg-text" aria-hidden="true">BRASA</span>
+          <div class="about__img-wrap">
+            <img src="assets/images/burg-brasa.jpg"
+              alt="Cozinheiro preparando hamburgueres na chapa quente da Brasa Burger"
+              class="about__real-img" loading="lazy" width="700" height="400" />
+          </div>
+          <div class="about__features" role="list" aria-label="Nossos diferenciais">
+            <div class="about__feature" role="listitem">
+              <i class="fa-solid fa-drumstick-bite about__feature-icon" aria-hidden="true"></i>
+              <strong class="about__feature-title">Carne Artesanal</strong>
+              <p class="about__feature-desc">Blend exclusivo, moído na hora</p>
+            </div>
+            <div class="about__feature" role="listitem">
+              <i class="fa-solid fa-wheat-awn about__feature-icon" aria-hidden="true"></i>
+              <strong class="about__feature-title">Pão Próprio</strong>
+              <p class="about__feature-desc">Produção diária, sem conservantes</p>
+            </div>
+            <div class="about__feature" role="listitem">
+              <i class="fa-solid fa-bottle-droplet about__feature-icon" aria-hidden="true"></i>
+              <strong class="about__feature-title">Molhos Caseiros</strong>
+              <p class="about__feature-desc">Receitas secretas da casa</p>
+            </div>
+            <div class="about__feature" role="listitem">
+              <i class="fa-solid fa-fire-flame-curved about__feature-icon" aria-hidden="true"></i>
+              <strong class="about__feature-title">Na Brasa</strong>
+              <p class="about__feature-desc">Chapa de ferro fundido, 260°C</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__content reveal">
+          <span class="section-tag">
+            <i class="fa-solid fa-hat-chef" aria-hidden="true"></i> Nossa história
+          </span>
+          <h2 class="section-title" id="about-heading">
+            NASCEMOS NA <span class="text-red">BRASA</span>
+          </h2>
+          <p class="about__text">
+            Começamos como um food truck num beco da cidade, com uma chapa,
+            um blend secreto e muita vontade de sacudir o mercado.
+            Hoje, 5 anos depois, continuamos com a mesma obsessão: fazer
+            o burguer mais honesto e saboroso da cidade.
+          </p>
+          <p class="about__text">
+            Cada hambúrguer sai da chapa direto pra sua mão. Sem intermediários,
+            sem congelado, sem mentira. Só ingredientes reais e fogo de verdade.
+            <i class="fa-solid fa-fire" aria-hidden="true"></i>
+          </p>
+          <a href="https://wa.me/5531999999999" class="btn btn--primary about__cta"
+            target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            Pedir Agora
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SEÇÃO 4: AVALIAÇÕES ── -->
+    <section class="reviews" id="avaliacoes" aria-labelledby="reviews-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-tag">
+            <i class="fa-solid fa-star" aria-hidden="true"></i> Avaliações
+          </span>
+          <h2 class="section-title" id="reviews-heading">
+            O QUE FALAM <span class="text-red">DE NÓS</span>
+          </h2>
+          <p class="section-subtitle">Mais de 2.400 avaliações 5 estrelas no Google e iFood</p>
+        </header>
+
+        <div class="reviews__grid">
+
+          <article class="review-card reveal" aria-label="Avaliação de Marcos A.">
+            <div class="review-card__stars" aria-label="Avaliação: 5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <footer class="review-card__author">
+              <div class="review-card__avatar" aria-hidden="true">
+                <img src="assets/images/face1.jpg" alt="Foto de Marcos A." class="review-card__avatar-img"
+                  onerror="this.style.display='none';this.parentElement.textContent='M'" />
+              </div>
+              <div>
+                <cite class="review-card__name">Marcos A.</cite>
+                <time class="review-card__date" datetime="2024-12">
+                  <i class="fa-brands fa-google" aria-hidden="true"></i>
+                  Google Maps &bull; há 3 dias
+                </time>
+              </div>
+            </footer>
+            <blockquote class="review-card__text">
+              "Melhor hambúrguer que já comi na vida. O Smash Bacon Duplo é um crime —
+              vicia demais. Já sou cliente há 2 anos e nunca decepciona."
+            </blockquote>
+          </article>
+
+          <article class="review-card reveal" aria-label="Avaliação de Juliana P.">
+            <div class="review-card__stars" aria-label="Avaliação: 5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <footer class="review-card__author">
+              <div class="review-card__avatar review-card__avatar--yellow" aria-hidden="true">
+                <img src="assets/images/face2.jpg" alt="Foto de Juliana P." class="review-card__avatar-img"
+                  onerror="this.style.display='none';this.parentElement.textContent='J'" />
+              </div>
+              <div>
+                <cite class="review-card__name">Juliana P.</cite>
+                <time class="review-card__date" datetime="2024-12">iFood &bull; há 1 semana</time>
+              </div>
+            </footer>
+            <blockquote class="review-card__text">
+              "Entrega rápida, burguer quente e incrível. O pão artesanal faz toda
+              a diferença. Nunca mais consigo comer fast food normal depois da Brasa Burger."
+            </blockquote>
+          </article>
+
+          <article class="review-card reveal" aria-label="Avaliação de Rafael S.">
+            <div class="review-card__stars" aria-label="Avaliação: 5 de 5 estrelas">
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+              <i class="fa-solid fa-star" aria-hidden="true"></i>
+            </div>
+            <footer class="review-card__author">
+              <div class="review-card__avatar review-card__avatar--purple" aria-hidden="true">
+                <img src="assets/images/face3.jpg" alt="Foto de Rafael S." class="review-card__avatar-img"
+                  onerror="this.style.display='none';this.parentElement.textContent='R'" />
+              </div>
+              <div>
+                <cite class="review-card__name">Rafael S.</cite>
+                <time class="review-card__date" datetime="2024-12">
+                  <i class="fa-brands fa-google" aria-hidden="true"></i>
+                  Google Maps &bull; há 2 semanas
+                </time>
+              </div>
+            </footer>
+            <blockquote class="review-card__text">
+              "O Hot Inferno é para os corajosos. Picância perfeita, sem exagero.
+              O molho é absurdo de bom. Já indiquei pra todo mundo que conheço."
+            </blockquote>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SEÇÃO 5: COMO PEDIR ── -->
+    <section class="how-to-order" id="como-pedir" aria-labelledby="how-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-tag">
+            <i class="fa-solid fa-motorcycle" aria-hidden="true"></i> Pedido
+          </span>
+          <h2 class="section-title" id="how-heading">
+            COMO <span class="text-red">PEDIR</span>
+          </h2>
+          <p class="section-subtitle">Do jeito que for melhor pra você</p>
+        </header>
+
+        <div class="how-to-order__grid">
+
+          <div class="how-card how-card--whatsapp reveal">
+            <div class="how-card__img-wrap">
+              <img src="assets/images/pedir1.jpg" alt="Pessoa usando WhatsApp no celular para fazer pedido"
+                class="how-card__img" loading="lazy" width="500" height="260" />
+              <div class="how-card__img-badge" aria-hidden="true">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+            </div>
+            <div class="how-card__body">
+              <h3 class="how-card__title">WhatsApp</h3>
+              <p class="how-card__desc">Manda mensagem direto no nosso WhatsApp. Atendimento rápido e personalizado.</p>
+              <a href="https://wa.me/5531999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20🍔"
+                class="how-card__btn how-card__btn--green" target="_blank" rel="noopener noreferrer"
+                aria-label="Abrir WhatsApp para fazer pedido na Brasa Burger">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                Abrir WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="how-card how-card--ifood reveal">
+            <div class="how-card__img-wrap">
+              <img src="assets/images/pedir2.jpg" alt="Entregador com mochila de delivery na cidade"
+                class="how-card__img" loading="lazy" width="500" height="260" />
+              <div class="how-card__img-badge" aria-hidden="true">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+            </div>
+            <div class="how-card__body">
+              <h3 class="how-card__title">iFood</h3>
+              <p class="how-card__desc">Pedido pelo iFood com rastreamento em tempo real. Pagamento facilitado no app.</p>
+              <a href="https://www.ifood.com.br/" class="how-card__btn" target="_blank" rel="noopener noreferrer"
+                aria-label="Abrir iFood para fazer pedido na Brasa Burger">
+                <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                Abrir iFood
+              </a>
+            </div>
+          </div>
+
+          <div class="how-card how-card--pickup reveal">
+            <div class="how-card__img-wrap">
+              <img src="assets/images/pedir3.jpg" alt="Interior aconchegante de uma hamburgueria para retirada no local"
+                class="how-card__img" loading="lazy" width="500" height="260" />
+              <div class="how-card__img-badge" aria-hidden="true">
+                <i class="fa-solid fa-store"></i>
+              </div>
+            </div>
+            <div class="how-card__body">
+              <h3 class="how-card__title">Retirar no Local</h3>
+              <p class="how-card__desc">Peça com antecedência e retire no balcão. Pronto quentinho pra você levar.</p>
+              <a href="#localizacao" class="how-card__btn" aria-label="Ver endereço para retirada na Brasa Burger">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Ver endereço
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SEÇÃO 6: LOCALIZAÇÃO ── -->
+    <section class="location" id="localizacao" aria-labelledby="location-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-tag">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Localização
+          </span>
+          <h2 class="section-title" id="location-heading">
+            NOS <span class="text-red">ENCONTRE</span>
+          </h2>
+        </header>
+
+        <div class="location__grid">
+
+          <div class="location__info reveal">
+
+            <address class="location__card location__card--address">
+              <div class="location__card-header">
+                <span class="location__icon" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <span class="location__label">Endereço</span>
+              </div>
+              <p class="location__value">
+                Rua das Brasas, 420<br />
+                Bairro do Sabor &middot; Belo Horizonte, MG
+              </p>
+              <hr class="location__divider" aria-hidden="true" />
+              <ul class="location__contacts" aria-label="Canais de contato">
+                <li class="location__contact-item">
+                  <span class="location__contact-icon" aria-hidden="true">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  <div class="location__contact-body">
+                    <span class="location__label">Telefone</span>
+                    <a href="tel:+5531999999999" class="location__value" aria-label="Ligar para (31) 99999-9999">
+                      (31) 99999-9999
+                    </a>
+                  </div>
+                </li>
+                <li class="location__contact-item">
+                  <span class="location__contact-icon location__contact-icon--green" aria-hidden="true">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </span>
+                  <div class="location__contact-body">
+                    <span class="location__label">WhatsApp</span>
+                    <a href="https://wa.me/5531999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20🍔"
+                      class="location__value" target="_blank" rel="noopener noreferrer"
+                      aria-label="Abrir WhatsApp para pedido">
+                      (31) 99999-9999
+                    </a>
+                  </div>
+                </li>
+                <li class="location__contact-item">
+                  <span class="location__contact-icon location__contact-icon--yellow" aria-hidden="true">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  <div class="location__contact-body">
+                    <span class="location__label">E-mail</span>
+                    <a href="mailto:oi@brasaburger.com.br" class="location__value"
+                      aria-label="Enviar e-mail para oi@brasaburger.com.br">
+                      oi@brasaburger.com.br
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </address>
+
+            <div class="location__card location__card--hours">
+              <div class="location__card-header">
+                <span class="location__icon" aria-hidden="true">
+                  <i class="fa-solid fa-clock"></i>
+                </span>
+                <span class="location__label">Horário de funcionamento</span>
+              </div>
+              <div class="location__hours" role="list">
+                <div class="location__hour-row" role="listitem">
+                  <span>Seg – Qui</span><span>18:00 – 23:00</span>
+                </div>
+                <div class="location__hour-row" role="listitem">
+                  <span>Sex – Sáb</span><span>18:00 – 00:00</span>
+                </div>
+                <div class="location__hour-row" role="listitem">
+                  <span>Domingo</span><span>18:00 – 22:00</span>
+                </div>
+                <div class="location__hour-row" role="listitem">
+                  <span>Agora</span>
+                  <span class="location__status">
+                    <i class="fa-solid fa-circle" aria-hidden="true"></i> Aberto
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="location__map reveal">
+            <div class="location__map-wrapper">
+              <iframe
+                src="https://maps.google.com/maps?q=Savassi,+Belo+Horizonte,+MG,+Brasil&output=embed&z=15"
+                title="Localização da Brasa Burger no Google Maps — Belo Horizonte, MG"
+                class="location__map-iframe"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+            <a href="https://maps.google.com/?q=Rua+das+Brasas,+420,+Belo+Horizonte"
+              class="location__map-link btn btn--primary" target="_blank" rel="noopener noreferrer"
+              aria-label="Abrir rota para a Brasa Burger no Google Maps">
+              <i class="fa-solid fa-map" aria-hidden="true"></i>
+              Ver no Google Maps
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SEÇÃO 7: GALERIA ── -->
+    <section class="gallery" id="galeria" aria-labelledby="gallery-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-tag">
+            <i class="fa-solid fa-camera" aria-hidden="true"></i> Galeria
+          </span>
+          <h2 class="section-title" id="gallery-heading">
+            NOSSA <span class="text-red">VITRINE</span>
+          </h2>
+          <p class="section-subtitle">Siga <strong>@brasaburger</strong> no Instagram</p>
+        </header>
+
+        <div class="gallery__grid" role="list" aria-label="Fotos da hamburgueria">
+          <div class="gallery__item gallery__item--1" role="listitem">
+            <img src="assets/images/vitr1.jpg" alt="Hambúrguer artesanal Brasa Burger" class="gallery__photo"
+              loading="lazy" width="700" height="400" />
+            <div class="gallery__overlay"><span><i class="fa-solid fa-heart" aria-hidden="true"></i> 2.4K</span></div>
+          </div>
+          <div class="gallery__item gallery__item--2" role="listitem">
+            <img src="assets/images/vitr2.jpg" alt="Hambúrguer com queijo derretido" class="gallery__photo"
+              loading="lazy" width="400" height="200" />
+            <div class="gallery__overlay"><span><i class="fa-solid fa-heart" aria-hidden="true"></i> 1.8K</span></div>
+          </div>
+          <div class="gallery__item gallery__item--3" role="listitem">
+            <img src="assets/images/vitr3.jpg" alt="Bacon crocante artesanal" class="gallery__photo"
+              loading="lazy" width="400" height="200" />
+            <div class="gallery__overlay"><span><i class="fa-solid fa-heart" aria-hidden="true"></i> 3.1K</span></div>
+          </div>
+          <div class="gallery__item gallery__item--4" role="listitem">
+            <img src="assets/images/vitr4.jpg" alt="Batata frita crocante" class="gallery__photo"
+              loading="lazy" width="400" height="200" />
+            <div class="gallery__overlay"><span><i class="fa-solid fa-heart" aria-hidden="true"></i> 987</span></div>
+          </div>
+          <div class="gallery__item gallery__item--5" role="listitem">
+            <img src="assets/images/vitr5.jpg" alt="Double smash burger com cheddar" class="gallery__photo"
+              loading="lazy" width="400" height="200" />
+            <div class="gallery__overlay"><span><i class="fa-solid fa-heart" aria-hidden="true"></i> 1.2K</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <div class="footer__logo">BRASA<span>.</span></div>
+          <p class="footer__tagline">
+            Sabor que vem do fogo. Feito na brasa, com ingredientes premium e muito amor desde 2019.
+          </p>
+          <div class="footer__social" role="list" aria-label="Redes sociais da Brasa Burger">
+            <a href="https://www.instagram.com" class="footer__social-btn" role="listitem"
+              target="_blank" rel="noopener noreferrer" aria-label="Seguir Brasa Burger no Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tiktok.com" class="footer__social-btn" role="listitem"
+              target="_blank" rel="noopener noreferrer" aria-label="Seguir Brasa Burger no TikTok">
+              <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/5531999999999" class="footer__social-btn" role="listitem"
+              target="_blank" rel="noopener noreferrer" aria-label="Falar com a Brasa Burger pelo WhatsApp">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer__col" aria-label="Links do cardápio">
+          <h4 class="footer__col-title">Cardápio</h4>
+          <ul>
+            <li><a href="#cardapio">Smash Burgers</a></li>
+            <li><a href="#cardapio">Clássicos</a></li>
+            <li><a href="#cardapio">Combos</a></li>
+            <li><a href="#cardapio">Vegetarianos</a></li>
+            <li><a href="#cardapio">Sobremesas</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Links institucionais">
+          <h4 class="footer__col-title">Empresa</h4>
+          <ul>
+            <li><a href="#sobre">Nossa História</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+            <li><a href="#">Franquias</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Canais de pedido">
+          <h4 class="footer__col-title">Pedidos</h4>
+          <ul>
+            <li>
+              <a href="https://wa.me/5531999999999" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+              </a>
+            </li>
+            <li><a href="#">iFood</a></li>
+            <li><a href="#localizacao">Retirar no Local</a></li>
+            <li><a href="#">Corporativo</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 Brasa Burger. Todos os direitos reservados.</p>
+        <p>Feito com <i class="fa-solid fa-fire" aria-label="fogo"></i> em BH</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── BOTÕES FLUTUANTES ── -->
+  <div class="floating-btns" role="complementary" aria-label="Atalhos rápidos de pedido">
+    <a href="https://wa.me/5531999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20🍔"
+      class="float-btn float-btn--whatsapp" target="_blank" rel="noopener noreferrer"
+      aria-label="Pedir pelo WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button class="float-btn float-btn--cart" id="cartToggle" aria-label="Abrir carrinho de pedidos"
+      aria-expanded="false" aria-controls="cartDrawer">
+      <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+      <span>Carrinho</span>
+      <span class="float-btn__badge" id="cartBadge" aria-live="polite" aria-label="Número de itens no carrinho">0</span>
+    </button>
+  </div>
+
+  <!-- ── CART OVERLAY ── -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <!-- ── CART DRAWER ── -->
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Carrinho de pedidos"
+    aria-modal="true" aria-hidden="true">
+
+    <header class="cart-drawer__header">
+      <h2 class="cart-drawer__title">
+        <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i> SEU PEDIDO
+      </h2>
+      <button class="cart-drawer__close" id="cartClose" aria-label="Fechar carrinho">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <div class="cart-drawer__items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty__icon" aria-hidden="true">🍔</span>
+        <p>Seu carrinho está vazio.<br />Adicione um burguer!</p>
+      </div>
+    </div>
+
+    <footer class="cart-drawer__footer">
+      <div class="cart-drawer__total">
+        <span class="cart-drawer__total-label">Total</span>
+        <span class="cart-drawer__total-price" id="cartTotal">R$ 0,00</span>
+      </div>
+      <button class="btn-checkout" id="cartCheckout" aria-label="Finalizar pedido pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        Pedir pelo WhatsApp
+      </button>
+    </footer>
+
+  </aside>
+
+  <script src="assets/js/script.js" defer></script>
+
+</body>
+</html>
