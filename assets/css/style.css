@@ -102,6 +102,7 @@
   /* ── Layout ── */
   --container-max: 1200px;
   --container-pad: 1.5rem;
+  --promo-banner-height: 48px;
   --navbar-height: 80px;
   --section-py:    var(--space-8);
 }
@@ -129,6 +130,7 @@ body {
   line-height:                1.6;
   overflow-x:                 hidden;
   -webkit-overflow-scrolling: touch;
+  padding-top:                calc(var(--promo-banner-height) + var(--navbar-height));
 }
 
 ul, ol { list-style: none; }
@@ -348,8 +350,10 @@ strong { color: var(--color-white); }
    7. NAVBAR
 ================================================================ */
 .navbar {
-  position:                sticky;
-  top:                     0;
+  position:                fixed;
+  top:                     var(--promo-banner-height);
+  left:                    0;
+  right:                   0;
   z-index:                 1000;
   background:              rgba(13, 13, 13, 0.95);
   backdrop-filter:         blur(20px);
@@ -484,8 +488,10 @@ strong { color: var(--color-white); }
    9. PROMO BANNER + COUNTDOWN
 ================================================================ */
 .promo-banner {
-  position:   sticky;
+  position:   fixed;
   top:        0;
+  left:       0;
+  right:      0;
   z-index:    1001;
   background: linear-gradient(90deg, var(--color-red) 0%, #c0333e 100%);
   padding:    0.875rem var(--container-pad);
@@ -2004,4 +2010,57 @@ strong { color: var(--color-white); }
   .mobile-menu { display: none !important; }
 
   body { background: white; color: black; }
+}
+
+/* ================================================================
+   SCROLL TO TOP BUTTON
+================================================================ */
+.scroll-top {
+  position:        fixed;
+  bottom:          10rem;
+  right:           3.5rem;
+  z-index:         900;
+  width:           48px;
+  height:          48px;
+  border-radius:   50%;
+  border:          2px solid var(--color-red);
+  background:      rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(12px);
+  color:           var(--color-white);
+  font-size:       1.1rem;
+  cursor:          pointer;
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  opacity:         0;
+  visibility:      hidden;
+  transform:       translateY(16px);
+  transition:      opacity 300ms ease, visibility 300ms ease, transform 300ms ease, background 200ms ease, border-color 200ms ease;
+  box-shadow:      0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-top--visible {
+  opacity:    1;
+  visibility: visible;
+  transform:  translateY(0);
+}
+
+.scroll-top:hover {
+  background:   var(--color-red);
+  border-color: var(--color-red);
+  transform:    translateY(-3px);
+  box-shadow:   0 6px 24px rgba(214, 54, 63, 0.45);
+}
+
+.scroll-top:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .scroll-top {
+    bottom: 10rem;
+    right:  1rem;
+    width:  42px;
+    height: 42px;
+  }
 }

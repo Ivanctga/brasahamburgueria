@@ -506,6 +506,30 @@ const ActiveNavModule = (() => {
    12. INICIALIZAÇÃO — Ponto de entrada único
 ================================================================ */
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* ── Scroll to Top Module ── */
+  const ScrollTopModule = {
+    init() {
+      const btn = document.getElementById('scrollTop');
+      if (!btn) return;
+
+      const toggle = () => {
+        if (window.scrollY > 400) {
+          btn.classList.add('scroll-top--visible');
+        } else {
+          btn.classList.remove('scroll-top--visible');
+        }
+      };
+
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  };
+
   const modules = [
     ['NavbarModule',       NavbarModule],
     ['MobileMenuModule',   MobileMenuModule],
@@ -516,6 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ['MenuButtonsModule',  MenuButtonsModule],
     ['EasterEggModule',    EasterEggModule],
     ['ActiveNavModule',    ActiveNavModule],
+    ['ScrollTopModule',    ScrollTopModule],
   ];
 
   modules.forEach(([name, mod]) => {
